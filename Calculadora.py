@@ -1,17 +1,19 @@
-import time
-
-print('''FORMAS DE PAGAMENTOS
+num1 = int(input('Digite um numero: '))
+print('''FORMA DE CALCULAR
  [ 1 ] Soma
- [ 2 ] Multiplicação
+ [ 2 ] Subtraçao
  [ 3 ] Divisao
- [ 4 ] Subtraçao''')
-opção = (input('Qual opção: '))
-time.sleep(1)
+ [ 4 ] Multiplicação''')
+opção = int(input('Qual opção: '))
 if opção == 1:
-    n = int(input('Digite um numero: '))
-    for c in range(0, 10):
-        print('{} + {} = {}'.format(n, c, n+c))
+    num2 = int(input('Digite um numero: '))
+    print(f'{num1} + {num2} = {num1+num2}')
 elif opção == 2:
-    n = int(input('Digite um numero: '))
-    for c in range(0, 10):
-        print('{} * {} = {}'.format(n, c, n*c))
+    num2 = int(input('Digite um numero: '))
+    print(f'{num1} - {num2} = {num1 - num2}')
+elif opção == 3:
+    num2 = int(input('Digite um numero: '))
+    print(f'{num1} / {num2} = {num1 // num2}')
+elif opção == 4:
+    num2 = int(input('Digite um numero: '))
+    print(f'{num1} * {num2} = {num1 * num2}')
