@@ -5,15 +5,19 @@ print('''FORMA DE CALCULAR
  [ 3 ] Divisao
  [ 4 ] Multiplicação''')
 opção = int(input('Qual opção: '))
-if opção == 1:
+while True:
     num2 = int(input('Digite um numero: '))
-    print(f'{num1} + {num2} = {num1+num2}')
-elif opção == 2:
-    num2 = int(input('Digite um numero: '))
-    print(f'{num1} - {num2} = {num1 - num2}')
-elif opção == 3:
-    num2 = int(input('Digite um numero: '))
-    print(f'{num1} / {num2} = {num1 // num2}')
-elif opção == 4:
-    num2 = int(input('Digite um numero: '))
-    print(f'{num1} * {num2} = {num1 * num2}')
+    resp = " "
+    if opção == 1:
+        print(f'{num1} + {num2} = {num1+num2}')
+    elif opção == 2:
+        print(f'{num1} - {num2} = {num1 - num2}')
+    elif opção == 3:
+        print(f'{num1} / {num2} = {num1 // num2}')
+    elif opção == 4:
+        num2 = int(input('Digite um numero: '))
+        print(f'{num1} * {num2} = {num1 * num2}')
+    while resp not in "SN":
+            resp = str(input('Pode afetuar o calculo? ')).upper()
+    if resp == "S":
+            break
